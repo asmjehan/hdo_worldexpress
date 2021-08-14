@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:hdo_worldexpress/WebPageLoad.dart';
+import 'WebPageLoad.dart';
 
 class AnimatedSplashScreen extends StatefulWidget {
   @override
@@ -10,13 +10,11 @@ class AnimatedSplashScreen extends StatefulWidget {
 
 class SplashScreenState extends State<AnimatedSplashScreen>
     with SingleTickerProviderStateMixin {
-  var _visible = true;
-
   AnimationController animationController;
   Animation<double> animation;
 
-  startSplashScreen() async {
-    var duration = const Duration(seconds: 6);
+  startTime() async {
+    var duration = const Duration(seconds: 3);
     return Timer(duration, () {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(builder: (_) {
@@ -38,10 +36,7 @@ class SplashScreenState extends State<AnimatedSplashScreen>
     animation.addListener(() => this.setState(() {}));
     animationController.forward();
 
-    setState(() {
-      _visible = !_visible;
-    });
-    startSplashScreen();
+    startTime();
   }
 
   @override
@@ -50,16 +45,6 @@ class SplashScreenState extends State<AnimatedSplashScreen>
       body: Stack(
         fit: StackFit.expand,
         children: <Widget>[
-          new Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            mainAxisSize: MainAxisSize.min,
-            children: <Widget>[
-              // Padding(padding: EdgeInsets.only(bottom: 30.0),child:new Image.asset('assets/powered_by.png',height: 25.0,fit: BoxFit.scaleDown,))
-              Padding(
-                  padding: EdgeInsets.only(bottom: 30.0),
-                  child: Text("Smart Software Ltd")),
-            ],
-          ),
           new Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
