@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.hdo_worldexpress">
    <application
-        android:label="hdo_worldexpress"
+        android:label="HDO Worldexpress"
         android:icon="@mipmap/launcher_icon">
         <activity
             android:name=".MainActivity"
