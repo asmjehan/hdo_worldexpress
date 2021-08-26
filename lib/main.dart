@@ -1,12 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:hdo_worldexpress/SplashScreenPage.dart';
-import 'package:hdo_worldexpress/WebPageLoad.dart';
 
 void main() {
-  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-    statusBarColor: Colors.lightBlueAccent.shade400,
-  ));
   runApp(MyApp());
 }
 
@@ -29,7 +24,6 @@ class _MyAppState extends State<MyApp> {
       ),
       debugShowCheckedModeBanner: false,
       home: AnimatedSplashScreen(),
-      routes: {},
     );
   }
 }
