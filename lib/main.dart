@@ -5,7 +5,7 @@ import 'package:hdo_worldexpress/WebPageLoad.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-    statusBarColor: Colors.transparent,
+    statusBarColor: Colors.lightBlueAccent.shade400,
   ));
   runApp(MyApp());
 }
@@ -24,7 +24,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        primarySwatch: Colors.green,
+        primarySwatch: Colors.blue,
         fontFamily: "Roboto",
       ),
       debugShowCheckedModeBanner: false,
