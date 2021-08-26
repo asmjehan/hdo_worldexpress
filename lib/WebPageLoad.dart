@@ -66,7 +66,7 @@ class WebViewState extends State<WebPageLoad> {
         children: <Widget>[
           SafeArea(
             child: WebView(
-              onWebResourceError: NoInternet(),
+              //onWebResourceError: NoInternet(),
               key: _key,
               initialUrl: this.url,
               javascriptMode: JavascriptMode.unrestricted,
